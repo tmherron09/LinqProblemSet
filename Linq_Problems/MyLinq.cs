@@ -6,30 +6,30 @@ using System.Threading.Tasks;
 
 namespace Linq_Problems
 {
-    public class MyLinq
+    public static class MyLinq
     {
 
 
-        public List<string> WordsWithTH(List<string> words)
+        public static List<string> WordsWithTH(List<string> words)
         {
+            var wordsWithTH = words.Where(w => w.ToLower().Contains("th")).ToList();
 
+            return wordsWithTH;
+        }
+
+
+        public static List<string> NoDuplicates(List<string> words)
+        {
 
             throw new NotImplementedException();
         }
 
-
-        public List<string> NoDuplicates(List<string> words)
-        {
-
-            throw new NotImplementedException();
-        }
-
-        public double ClassAverageWithoutLowestGrade(List<string> classGrades)
+        public static double ClassAverageWithoutLowestGrade(List<string> classGrades)
         {
             throw new NotImplementedException();
         }
 
-        public string AlphabeticalFrequency(string word)
+        public static string AlphabeticalFrequency(string word)
         {
             throw new NotImplementedException();
         }
