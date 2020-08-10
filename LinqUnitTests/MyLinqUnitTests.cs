@@ -17,7 +17,23 @@ namespace LinqUnitTests
             List<string> expected = new List<string>() { "the", "this", "tenth", "mathematics" };
             List<string> actual;
             //  Act
-            actual = MyLinq.WordsWithTH(words);
+            actual = MyLinq.WordsWithTh(words);
+
+            //  Assert
+
+            CollectionAssert.AreEqual(expected, actual);
+
+        }
+        [TestMethod]
+        public void WordsWithThUpperCase_ProblemSetInputUpperCase_4Words()
+        {
+            //  Arrange
+            List<string> words = new List<string>() { "The", "Bike", "This", "It", "Tenth", "Mathematics" };
+
+            List<string> expected = new List<string>() { "The", "This", "Tenth", "Mathematics" };
+            List<string> actual;
+            //  Act
+            actual = MyLinq.WordsWithThUpperCase(words);
 
             //  Assert
 

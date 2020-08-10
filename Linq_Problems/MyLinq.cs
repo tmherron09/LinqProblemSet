@@ -10,11 +10,28 @@ namespace Linq_Problems
     {
 
 
-        public static List<string> WordsWithTH(List<string> words)
+        /// <summary>
+        /// Assumes we are only taking in lowercase words.
+        /// </summary>
+        /// <param name="words"></param>
+        /// <returns>List of strings containing 'th'</returns>
+        public static List<string> WordsWithTh(List<string> words)
         {
-            var wordsWithTH = words.Where(w => w.ToLower().Contains("th")).ToList();
+            // Using var:
+            //var wordsWithTH = words.Where(w => w.Contains("th")).Select(w => w).ToList();
 
-            return wordsWithTH;
+            return  words.Where(w => w.Contains("th")).Select(w => w).ToList();
+        }
+        /// <summary>
+        /// First Converts to lowercase, then checks for "th".
+        /// </summary>
+        /// <param name="words"></param>
+        /// <returns>List of strings containing 'th'</returns>
+        public static List<string> WordsWithThUpperCase(List<string> words)
+        {
+            //var wordsWithTH = words.Where(w => w.ToLower().Contains("th")).ToList();
+
+            return words.Where(w => w.ToLower().Contains("th")).ToList();
         }
 
 

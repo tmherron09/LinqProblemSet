@@ -10,6 +10,8 @@ namespace Linq_Problems
     {
         static void Main(string[] args)
         {
+
+            Console.ReadLine();
         }
     }
 }
