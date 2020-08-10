@@ -8,12 +8,12 @@ namespace Linq_Problems
 {
     public static class MyLinq
     {
-
+        // Seperated into two methods, just to show my work and reasoning.
 
         /// <summary>
         /// Assumes we are only taking in lowercase words.
         /// </summary>
-        /// <param name="words"></param>
+        /// <param name="words">List of strings to parse.</param>
         /// <returns>List of strings containing 'th'</returns>
         public static List<string> WordsWithTh(List<string> words)
         {
@@ -25,7 +25,7 @@ namespace Linq_Problems
         /// <summary>
         /// First Converts to lowercase, then checks for "th".
         /// </summary>
-        /// <param name="words"></param>
+        /// <param name="words">List of strings to parse.</param>
         /// <returns>List of strings containing 'th'</returns>
         public static List<string> WordsWithThUpperCase(List<string> words)
         {
@@ -38,11 +38,14 @@ namespace Linq_Problems
         public static List<string> NoDuplicates(List<string> words)
         {
 
-            throw new NotImplementedException();
+            //var noDuplicates = words.Distinct().ToList();
+
+            return words.Distinct().ToList();
         }
 
         public static double ClassAverageWithoutLowestGrade(List<string> classGrades)
         {
+            
             throw new NotImplementedException();
         }
 
