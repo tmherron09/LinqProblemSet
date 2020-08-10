@@ -45,8 +45,12 @@ namespace Linq_Problems
 
         public static double ClassAverageWithoutLowestGrade(List<string> classGrades)
         {
-            
-            throw new NotImplementedException();
+
+            var substringsInts = classGrades.Select(w => w.Split(',').Select(s => Convert.ToInt32(s)));
+            var removeMin = substringsInts.Select(s => s.Where(x => x > s.Min()));
+            var individualAvg = removeMin.Select(r => r.Average());
+
+            return individualAvg.Average();
         }
 
         public static string AlphabeticalFrequency(string word)
